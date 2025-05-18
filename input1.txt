@@ -1,3 +1,4 @@
 variable2 = 3;
 var_1 = \"HOLA'\COMOESYAS'\";
 output(\"Comoesy as sdkfj sdf \");
+thiago = \" Hoy consegui un laburo \";
