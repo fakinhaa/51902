@@ -1,0 +1,9 @@
+x = ;                 
+
+output("Hola mundo";      
+
+output(\"texto no cerrado;  
+
+123x = 4;               
+
+output(texto);             

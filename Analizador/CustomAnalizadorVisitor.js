@@ -1,8 +1,8 @@
 import { Parser } from "antlr4";
-import Ejercicio5dVisitor from "./generated/Ejercicio5dVisitor.js";
-import Ejercicio5dParser from "./generated/Ejercicio5dParser.js";
+import AnalizadorVisitor from "./generated/AnalizadorVisitor.js";
+import AnalizadorParser from "./generated/AnalizadorParser.js";
 
-export class CustomEjercicio5dVisitor extends Ejercicio5dVisitor{
+export class CustomAnalizadorVisitor extends AnalizadorVisitor{
 
     constructor() {
         super();
@@ -25,7 +25,7 @@ export class CustomEjercicio5dVisitor extends Ejercicio5dVisitor{
         /* Las subexpresiones se visitaran recursivamente hasta ir obteniendo los valores correspondientes */
         const left =  this.visit(ctx.expr(0));   //visito la subexpresion a la izquierda de la operacion
         const right = this.visit(ctx.expr(1));  //visito la subexpresion a la derecha de la operacion. 
-        if (ctx.op.type==Ejercicio5dParser.MUL)
+        if (ctx.op.type==AnalizadorParser.MUL)
           return left * right;
         else
           return left / right;
@@ -34,7 +34,7 @@ export class CustomEjercicio5dVisitor extends Ejercicio5dVisitor{
       visitAddSub(ctx) {
         const left =  this.visit(ctx.expr(0));  
         const right = this.visit(ctx.expr(1));  
-        if (ctx.op.type==Ejercicio5dParser.ADD){
+        if (ctx.op.type==AnalizadorParser.ADD){
           return left + right; }
         else
           return left - right;

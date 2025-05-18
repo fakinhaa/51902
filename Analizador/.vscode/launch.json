@@ -5,8 +5,8 @@
     "name": "Debug ANTLR4 grammar",
     "type": "antlr-debug",
     "request": "launch",
-    "input": "input.js",
-    "grammar": "Ejercicio5d.g4",
+    "input": "input.txt",
+    "grammar": "Analizador.g4",
     "printParseTree": true,
     "visualParseTree": true
     }

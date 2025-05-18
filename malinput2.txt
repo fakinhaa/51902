@@ -1,0 +1,9 @@
+= 99;                     
+
+nombre = \"sin cierre;     
+
+output\"Texto sin paréntesis\"); 
+
+output(\"Texto sin fin\")  
+
+variable 42 =;             
