@@ -99,7 +99,9 @@ async function main() {
 function traducirCodigoJS(codigotxt){
     
     //Separar lineas de codigo
-    const lineas = codigotxt.split('\n');
+    let lineas = codigotxt.split('\n');
+    lineas = codigotxt.split(/(?<=;)/);
+
     let codigoJS = '';
     let match_assign_str = '';
     let match_assign_int = '';
@@ -108,12 +110,10 @@ function traducirCodigoJS(codigotxt){
     for (let linea of lineas){
         linea = linea.trim();
         if (linea === '') continue;
-        
+
         //Reconocimiento assignstats        
         //Textos
-        match_assign_str = linea.match(/^(\w+)\s*=\s*\\"((?:[^\\"]|\\.)*)\\";/);
-        
-        //console.log("match_assign_str = ",match_assign_str,"\n");
+        match_assign_str = linea.match(/^(\w+)\s*=\s*"((?:[^"])*)"\s*;/);
         if (match_assign_str) {
             const nombreVar = match_assign_str[1];     //Nombre variable
             let valorVar = "`";                      //backticks declaracion
@@ -125,8 +125,7 @@ function traducirCodigoJS(codigotxt){
         }        
 
         //Digitos
-        match_assign_int = linea.match(/^(\w+)\s*=\s*(.+);/);
-        //console.log("match_assign_int = ",match_assign_int,"\n");
+        match_assign_int = linea.match(/^(\w+)\s*=\s*(.+)\s*;/);
         if (match_assign_int && !isNaN(match_assign_int[2])){
             const nombreVar = match_assign_int[1];      //Nombre variable
             const valorVar = Number(match_assign_int[2]);       //Valor Variable
@@ -136,11 +135,12 @@ function traducirCodigoJS(codigotxt){
         }
 
         //Reconocimiento de outputstats
-        match_output = linea.match(/^output\s*\(\\"([^\\"]*)\\"?\);$/);
-        //console.log("match_output = ",match_output,"\n");
+        match_output = linea.match(/^output\s*\("([^"]*)"?\);/);
         if (match_output) {
-            const expresion = match_output[1];
-            codigoJS += `console.log("${expresion}");\n`;
+            let expresion = "`";                      //backticks declaracion
+            expresion += match_output[1];             //Valor Variable
+            expresion += "`";   
+            codigoJS += `console.log(${expresion});\n`;
         }
     }
 

@@ -1,6 +1,6 @@
-x = ;                 
+x = ; y = -;                 
 
-output("Hola mundo";      
+output("Hola mundo";;      
 
 output(\"texto no cerrado;  
 

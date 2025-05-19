@@ -1,23 +1,20 @@
 grammar Analizador;
 
 //Gramatica
-prog: (stat)*;
+prog: (stat)* EOF;
 
-stat: assignstat (NEWLINE)?
-    | outputstat (NEWLINE)?
+stat: assignstat 
+    | outputstat 
     ;
 
-assignstat: ID '=' const ';'  
+assignstat: ID EQUAL const END  
     ;
 
-outputstat: 'output' '(' textlit ')' ';'
+outputstat: KEYWORD PARENR TEXTLIT PARENL END
     ;
 
 const: NUMBER
-    | textlit
-    ;
-
-textlit: TEXTLIM (CHAR | ID | KEYWORD | NUMBER | PARENR | PARENL | EQUAL | END)* TEXTLIM
+    | TEXTLIT
     ;
 
 //Lexemas
@@ -26,16 +23,11 @@ PARENR : '(';
 PARENL : ')';
 EQUAL : '=';
 END : ';';
-TEXTLIM : '\\"';
+TEXTLIT: '"' (~["])* '"';
 
 ID: LETTER (LETTER | DIGIT | '_')*;
-NUMBER : DIGIT (DIGIT)* ;
+NUMBER : (DIGIT)+ ;
 fragment DIGIT : [0-9]+;
 fragment LETTER : [a-zA-Z]+;
 
 WS: [ \t\r\n]+ -> skip;
-NEWLINE:'\r'? '\n';
-CHAR : . ;
-
-
-

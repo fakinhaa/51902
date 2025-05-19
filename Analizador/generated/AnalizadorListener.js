@@ -1,4 +1,4 @@
-// Generated from c://Users//Fakinha//Desktop//Analizador//antlr-calculator-project//Analizador.g4 by ANTLR 4.13.2
+// Generated from c://Users//Fakinha//Desktop//51902//Analizador//Analizador.g4 by ANTLR 4.13.2
 // jshint ignore: start
 import antlr4 from 'antlr4';
 
@@ -47,15 +47,6 @@ export default class AnalizadorListener extends antlr4.tree.ParseTreeListener {
 
 	// Exit a parse tree produced by AnalizadorParser#const.
 	exitConst(ctx) {
-	}
-
-
-	// Enter a parse tree produced by AnalizadorParser#textlit.
-	enterTextlit(ctx) {
-	}
-
-	// Exit a parse tree produced by AnalizadorParser#textlit.
-	exitTextlit(ctx) {
 	}
 
 

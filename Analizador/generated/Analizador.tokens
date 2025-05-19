@@ -3,15 +3,12 @@ PARENR=2
 PARENL=3
 EQUAL=4
 END=5
-TEXTLIM=6
+TEXTLIT=6
 ID=7
 NUMBER=8
 WS=9
-NEWLINE=10
-CHAR=11
 'output'=1
 '('=2
 ')'=3
 '='=4
 ';'=5
-'\\"'=6
