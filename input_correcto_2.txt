@@ -6,14 +6,6 @@ output("Hello World");
 
 count=42;
 
-output("Test 123!");
+name="fabi";
 
-name="ChatGPT";
-
-output("Output with spaces");
-
-score=1000;
-
-output("Another output");
-
-temp_var="value123";
+output("__#$nunca$%&con#$comillas))#$(");
