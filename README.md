@@ -6,21 +6,6 @@ Este proyecto implementa un **analizador sintáctico** que procesa cadenas de en
 Clona este repositorio: git clone https://github.com/fakinhaa/51902.git
 Instalar node.js: https://nodejs.org/en/download
 
-
-## Instrucciones de Uso
-Para ejecutar el analizador, es necesario posicionarse dentro de la carpeta ./Analizador y usar el comando `bashnpm start`bash de Node.js.
-La instruccion que se quiera ejecutar se debe escribir en el archivo **input.txt** dentro de ./Analizador. En caso de no existir, 
-La gramática define un lenguaje que permite:
-Asignación de variables: Se puede asignar un valor o cadena a una variable mediante el uso de un operador de asignación (=).
-`bash
-x = 10;
-text = "hello,world!";
-`bash
-Salida de texto: Permite imprimir texto a la salida estándar utilizando la palabra clave output.
-`bash
-output("hello,world!");
-`bash
-
 ## Características
 
 - Verificación sintáctica y semantica de expresiones según una gramática definida.
@@ -28,23 +13,19 @@ output("hello,world!");
 - Construccion de tabla de lexemas y tokens.
 - Construcción de árbol sintáctico.
 - Entrada por archivo (input.txt) y consola.
-- Compatible con gramáticas [LL(1) / LR(1) / SLR / etc.].
 
-## ¿Cómo funciona?
+## Instrucciones de Uso
+Para ejecutar el analizador, es necesario posicionarse dentro de la carpeta ./Analizador y usar el comando `bashnpm start`bash de Node.js.<br>
+La instruccion que se quiera ejecutar se debe escribir en el archivo **input.txt** dentro de ./Analizador. En caso de no existir, se ingresan las instrucciones por consola.<br>
 
-1. **Tokenización** (si se incluye un analizador léxico):
-   - Se convierte la cadena de entrada en una secuencia de tokens.
+La gramática define un lenguaje que permite:<br>
+- Asignación de variables: Se puede asignar un valor o cadena a una variable mediante el uso de un operador de asignación (=).<br>
+- Salida de texto: Permite imprimir texto a la salida estándar utilizando la palabra clave output().<br>
 
-2. **Análisis sintáctico**:
-   - Se aplica el algoritmo [especificar: por ejemplo, descendente recursivo, tabla LL(1), autómata LR, etc.].
-   - Se analiza la estructura conforme a las reglas de la gramática.
-
-3. **Salida**:
-   - Confirmación de análisis exitoso o errores encontrados.
-   - (Opcional) Visualización o exportación del árbol sintáctico.
-
-## 📘 Ejemplo de uso
-
+## Ejemplo de uso
 ```bash
-# Si es una aplicación por consola
-$ python parser.py "a + b * (c - d)"
+# Asignacion de variables
+x = 10;
+text = "hello,world!";
+# Salida de texto
+output("hello,world!");
