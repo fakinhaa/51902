@@ -2,24 +2,32 @@
 
 Este proyecto implementa un **analizador sintáctico** que procesa cadenas de entrada conforme a una gramática formal definida. El objetivo principal es verificar si una secuencia de tokens cumple con las reglas sintácticas del lenguaje y generar una estructura de árbol (o informe de errores) en base a eso.
 
-
 ## Instalación
-
 Clona este repositorio: git clone https://github.com/fakinhaa/51902.git
+Instalar node.js: https://nodejs.org/en/download
 
 
-# Instrucciones de Uso
-```sh
-Incorporar aquí las instrucciones detalladas de uso, gráficos explicativos y cualquier otra
-información que considere importante para favorecer el testeo y evaluación de su proyecto de
-analizador.
+## Instrucciones de Uso
+Para ejecutar el analizador, es necesario posicionarse dentro de la carpeta ./Analizador y usar el comando `bashnpm start`bash de Node.js.
+La instruccion que se quiera ejecutar se debe escribir en el archivo **input.txt** dentro de ./Analizador. En caso de no existir, 
+La gramática define un lenguaje que permite:
+Asignación de variables: Se puede asignar un valor o cadena a una variable mediante el uso de un operador de asignación (=).
+`bash
+x = 10;
+text = "hello,world!";
+`bash
+Salida de texto: Permite imprimir texto a la salida estándar utilizando la palabra clave output.
+`bash
+output("hello,world!");
+`bash
 
 ## Características
 
-- Verificación sintáctica de expresiones según una gramática definida.
-- Construcción de árbol sintáctico (opcional).
+- Verificación sintáctica y semantica de expresiones según una gramática definida.
 - Detección y reporte de errores sintácticos.
-- Entrada por consola, archivo o API (según implementación).
+- Construccion de tabla de lexemas y tokens.
+- Construcción de árbol sintáctico.
+- Entrada por archivo (input.txt) y consola.
 - Compatible con gramáticas [LL(1) / LR(1) / SLR / etc.].
 
 ## ¿Cómo funciona?
