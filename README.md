@@ -15,7 +15,7 @@ Instalar node.js: https://nodejs.org/en/download<br>
 - Entrada por archivo (input.txt) y consola.
 
 ## Instrucciones de Uso
-Para ejecutar el analizador, es necesario posicionarse dentro de la carpeta ./Analizador y usar el comando `bashnpm start`bash de Node.js.<br>
+Para ejecutar el analizador, es necesario posicionarse dentro de la carpeta ./Analizador y usar el comando `npm start` de Node.js.<br>
 La instruccion que se quiera ejecutar se debe escribir en el archivo **input.txt** dentro de ./Analizador. En caso de no existir, se ingresan las instrucciones por consola.<br>
 
 La gramática define un lenguaje que permite:<br>
