@@ -1,10 +1,10 @@
 # Analizador Sintáctico
 
-Este proyecto implementa un **analizador sintáctico** que procesa cadenas de entrada conforme a una gramática formal definida. El objetivo principal es verificar si una secuencia de tokens cumple con las reglas sintácticas del lenguaje y generar una estructura de árbol (o informe de errores) en base a eso.
+Este proyecto implementa un **analizador sintáctico** que procesa cadenas de entrada conforme a una gramática formal definida. El objetivo principal es verificar si una secuencia de tokens cumple con las reglas sintácticas del lenguaje y generar una estructura de árbol (o informe de errores) en base a eso.<br>
 
 ## Instalación
-Clona este repositorio: git clone https://github.com/fakinhaa/51902.git
-Instalar node.js: https://nodejs.org/en/download
+Clona este repositorio: git clone https://github.com/fakinhaa/51902.git<br>
+Instalar node.js: https://nodejs.org/en/download<br>
 
 ## Características
 
